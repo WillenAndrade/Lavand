@@ -1,0 +1,82 @@
+.headerComponent {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(77,28,35);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+}
+
+.headerComponent h1 {
+    margin-left: 20px;
+    color: gold;
+    cursor: pointer;
+}
+
+.headerComponent h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(168, 156, 84);
+    color: white;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+
+.nav {
+    color: white;
+    margin-right: 20px;
+}
+.nav-ul {
+    display: flex;
+    margin-right: 20px;
+    
+}
+.nav-li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.Link-to-Home {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.Link-to{
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.Link-to-cart{
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+    color: rgb(236, 213, 82);
+    transition: 0.3s ease-in-out;
+}
+
+.Link-to:hover {
+    font-size: 24px;
+    color: rgb(236, 213, 82);
+}
+
+.Link-to-cart:hover {
+    font-size: 24px;
+}

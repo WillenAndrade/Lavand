@@ -1,0 +1,20 @@
+.buy-btn {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, rgb(77,28,35), rgb(133, 50, 62), rgb(77,28,35));
+    background: rgb(77,28,35);
+    background: rgb(109, 7, 24);
+    background: rgb(155, 10, 34);
+    padding: 2px 10px;
+    transition: 0.3s ease-in-out;
+    color: white;
+    font-weight: lighter;
+}
+
+    .buy-btn:hover {
+        border: 1px solid rgb(236, 213, 82);
+    }

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 60vh;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+  }
+
+    .carousel-container h2 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-size: 26px;
+      padding: 10px;
+    }
+  
+  .carousel {
+    position: relative;
+    width: 800px;
+    height: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+  }
+
+  .carousel-slide {
+    width: 80%;
+    min-height: 100%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: 0.3s ease-in-out;
+    background: white;
+    overflow: hidden;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 40%;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .carousel-btn.prev {
+    left: 5px;
+  }
+  
+  .carousel-btn.next {
+    right: 5px;
+  }
+
+  #prev-btn, #next-btn {
+    font-size: 80px;
+    font-weight: 300;
+    color: rgb(219,167,68);
+    color: rgb(23, 28, 30);
+    color: rgb(61,99,69);
+    cursor: pointer;
+  }
+
+    .wine-image-div {
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      background: white;
+      transition: 0.3s ease-in-out;
+    }
+  
+    .wine-offer-div {
+      width: 370px;
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background: white;
+    }
+  
+  .buy-btn {
+    width: 130px;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    background-image: linear-gradient(to right, rgb(77,28,35), rgb(114, 41, 53), rgb(77,28,35) );
+    border-radius: 30px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    border: 2px solid rgb(219,167,68);
+    padding: 3px 8px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  .card-container {
+    background: linear-gradient(to right, rgb(199, 141, 73), rgb(242, 193, 120) );
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .card-container-top {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px 10px 0 0;
+    background: linear-gradient(to right, rgb(199, 141, 73), rgb(242, 193, 120) );
+    padding: 0 5px;
+  }
+  
+  .card-container-bottom {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: rgb(28,28,28);
+    color: rgb(242, 193, 120);
+    padding: 0 5px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);  /* Aumenta 10% */
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  @media (min-width: 361px){
+    .wine-offer-div {
+      width: 400px;
+      height: 400px;
+  }
+}

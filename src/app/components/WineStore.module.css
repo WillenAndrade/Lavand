@@ -1,0 +1,122 @@
+.WineStore {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .WineStore h2 {
+        width: 100%;
+        background: rgb(23, 28, 30);
+        background: rgb(61,99,69);
+        background-image: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+        text-align: center;
+        padding: 20px 0;
+        color: rgb(168, 156, 84);
+        color: white;
+        font-weight: 400;
+        margin-bottom: 20px;
+        display: none;
+    }
+
+.WineGrid {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.WineCard {
+    width: 200px;
+    height: 340px;
+    width: 300px;
+    height: 440px;
+    border-radius: 15px;
+    border: 1px solid rgb(77,28,35);
+    display: flex;
+    align-items:center;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+    padding: 15px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+    .WineName {
+        color: rgb(77,28,35);
+        color: rgb(23, 28, 30);
+        color: rgb(61,99,69);
+        color: rgb(23, 28, 30);
+        color: rgb(61,99,69);
+        font-size: 22px;
+        font-weight: lighter;
+    }
+
+    .WineDescription {
+        font-size: 24px;
+        font-weight: 300;
+        color: rgb(23, 28, 30);
+        color: rgb(61,99,69);
+    }
+
+.WineImage {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.WineCard-description {
+    color: white;
+    background-color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 0 -3px 5px rgba(0,0,0, 0.1);
+    position: absolute;
+    padding: 0.6rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 100%;
+    background: rgb(61,99,69);
+    background-image: linear-gradient(to right, rgb(77,28,35), rgb(133, 50, 62), rgb(77,28,35));
+    background-image: linear-gradient(to right, rgb(61,99,69), rgb(96, 146, 107), rgb(61,99,69));
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 1px solid rgb(236, 213, 82);
+    border: none;
+}
+       .WineCard #description-p {
+            font-size: 21px;
+            margin: 3px;
+            color: rgb(109, 7, 24);
+            color: rgb(236, 213, 82);
+
+       }
+
+       .description-span {
+        color: rgb(247, 221, 75);
+        font-size: 20px;
+        margin: 5px 0 20px 0;
+        color: black;
+       }
+
+    .WineCard:hover .WineCard-description {
+        transform: translateY(0);
+        visibility: visible;
+        font-weight: lighter;
+    }
