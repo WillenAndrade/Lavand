@@ -41,8 +41,8 @@ export default function CartPage() {
       )}
 
       <div className={styles["cart-total-div"]}>
-        <h2>Total</h2>
-        <h2>{totalPrice.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</h2>
+        <h2 className={styles["cart-total-div-h2"]}>Total</h2>
+        <h2 className={styles["cart-total-div-h2-price"]}>{totalPrice.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</h2>
       </div>
       <CheckoutButton />
     </div>

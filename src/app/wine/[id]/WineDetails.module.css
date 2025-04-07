@@ -1,113 +1,118 @@
 .wine-container {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .wine-box {
-    width: 800px;
-    min-height: 600px;
-    border-radius: 15px;
-    border: 1px solid rgb(51, 3, 11);
+    width: 300px;
+    height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    border-radius: 25px;
+    border: 1px solid black;
 }
 
     .wine-image {
-        width: 380px;
-        height: 580px;
+        width: 90%;
+        height: 440px;
         position: relative;
         background-size: cover;
         background-position: center;
         border-radius: 15px; 
         cursor: pointer;
         overflow: hidden;
+        margin-top: 20px;
     }
 
-        .wine-image:hover .wine-details {
-            transform: translateY(0);
-            visibility: visible;
-            font-weight: lighter;
-        }
-
-    .wine-details {
-        color: white;
-        background-color: white;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-        box-shadow: 0 -3px 5px rgba(0,0,0, 0.1);
-        position: absolute;
-        padding:  20px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transform: translateY(100%);
-        transition: 0.3s ease-in-out;
-        overflow: hidden;
-        max-height: 100%;
-        background-image: linear-gradient(to right, rgb(61,99,69), rgb(96, 146, 107), rgb(61,99,69));
-        background-image: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
-        visibility: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        border-top: 1px solid rgb(236, 213, 82);
-        text-align: center;
-        border: none;
+    .wine-image:hover .wine-details {
+        transform: translateY(0);
+        visibility: visible;
         font-weight: lighter;
     }
 
-        .description-name {
-            color: white;
-        }
+.wine-details {
+    color: white;
+    background-color: white;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 0 -3px 5px rgba(0,0,0, 0.1);
+    position: absolute;
+    padding:  20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 100%;
+    background-image: linear-gradient(to right, rgb(61,99,69), rgb(96, 146, 107), rgb(61,99,69));
+    background-image: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 1px solid rgb(236, 213, 82);
+    text-align: center;
+    border: none;
+    font-weight: lighter;
+}
 
-        .description-nationality {
-            font-size: 18px;
-            color: black;
-            margin-bottom: 15px;
-        }
+.description-name {
+    color: white;
+    font-size: 26px;
+    padding: 10px;
+}
 
-        .description-grape {
-            font-size: 16px;
-            margin-bottom: 20px;
-            color: rgb(109, 7, 24);
-        }
-        .description-text {
-            font-size: 20px;
-            color: white;
-            font-weight: lighter;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
+.description-nationality {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 15px;
+}
 
-        .description-coloring {
-            margin-bottom: 15px;
-            color: rgb(189, 226, 197);
-        }
-        
-        .description-indication {
-            color: rgb(252, 225, 77);
-        }
-        
-        .description-award {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: black;
-        }
-        .description-price {
-            margin-bottom: 15px;
-            font-weight: lighter;
-            color: rgb(61,99,69);
-        }
+.description-grape {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: rgb(109, 7, 24);
+    padding: 0 10px;
+}
+.description-text {
+    font-size: 16px;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.description-coloring {
+    margin-bottom: 15px;
+    color: rgb(189, 226, 197);
+}
+
+.description-indication {
+    color: rgb(252, 225, 77);
+    padding: 0 10px;
+}
+
+.description-award {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: black;
+}
+.description-price {
+    font-weight: lighter;
+    color: rgb(61,99,69);
+}
 
     .wine-checkout {
-        width: 380px;
-        height: 580px;
+        width: 90%;
+        height: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -115,6 +120,8 @@
         flex-direction: column;
         border-radius: 15px;
         cursor: pointer;
+        text-align: center;
+        gap: 10px;
     }
 
     .description-name-checkout-div {
@@ -127,6 +134,7 @@
         .description-name-checkout {
             color: rgb(243, 213, 44);
             text-align: center;
+            font-size: 26px;
         }
     .description-nationality-checkout {
         font-size: 16px;
@@ -135,7 +143,7 @@
     }
 
     .quantity {
-        width: 90%;
+        width: 100%;
         height: 60px;
         display: flex;
         justify-content: center;
@@ -143,7 +151,7 @@
         font-size: 20px;
         font-weight: lighter;
         background-image: linear-gradient(to right, rgb(51, 3, 11), rgb(138, 7, 29));
-        border-radius: 40px;
+        border-radius: 40px
     }
 
     .quantity-selector {
@@ -152,7 +160,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
     }
     
         .btn-minus{
@@ -184,7 +192,7 @@
         }
 
         .buy-btn-details {
-            width: 150px;
+            width: 110px;
             height: 40px;
             display: flex;
             justify-content: center;
@@ -201,3 +209,184 @@
             .buy-btn-details:hover {
                 border: 1px solid rgb(236, 213, 82);
             }
+
+@media(min-width: 340px) {
+    .wine-box {
+        width: 340px;
+    }
+    .quantity {
+        width: 90%;
+    }
+    .quantity-selector {
+        gap: 10px;
+    }
+}
+
+@media(min-width: 360px) {
+
+}
+
+@media(min-width: 480px) {
+    .description-name-checkout {
+        font-size: 26px;
+    }
+    .description-text {
+        font-size: 18px
+    }
+}
+
+@media(min-width: 600px) {
+    .wine-box {
+        width: 600px;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        border-radius: 25px;
+        gap: 10px;
+    }
+    .description-nationality {
+        font-size: 22px;
+    }
+    .description-text {
+        font-size: 18px
+    }
+    .description-indication{
+        color: rgb(252, 225, 77);
+        font-size: 20px;
+    } 
+    .description-grape {
+        font-size: 20px;
+    }
+    .description-price {
+        font-size: 26px;
+    }
+    .wine-image {
+        margin: 0px;
+    }
+
+}
+
+@media(min-width: 720px) {
+    .wine-image {
+        width: 380px;
+        height: 480px;
+    }
+    .wine-checkout {
+        width: 380px;
+        height: 480px;
+        gap: 15px;
+    }
+    .description-name-checkout {
+        font-size: 30px;
+    }
+    .description-text {
+        font-size: 20px
+    }
+    .description-grape {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 820px) {
+    .wine-image {
+        width: 380px;
+        height: 460px;
+    }
+    .wine-checkout {
+        width: 380px;
+        height: 460px;
+    }
+    .description-nationality {
+        font-size: 24px;
+    }
+    .description-text {
+        font-size: 20px
+    }
+}
+
+@media(min-width: 1024px) {
+    
+    .wine-box {
+        width: 600px;
+        height: 540px;
+    }
+    .wine-image {
+        width: 380px;
+        height: 500px;
+    }
+    .wine-checkout {
+        width: 380px;
+        height: 480px;
+        gap: 20px;
+    }
+    .description-text {
+        font-size: 20px
+    }
+    .description-grape {
+        font-size: 22px;
+    }
+    .description-price {
+        font-size: 28px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .wine-box {
+        width: 600px;
+        height: 620px;
+    }
+    .wine-image {
+        width: 500px;
+        height: 620px
+    }
+    .wine-checkout {
+        width: 500px;
+        height: 620px;
+        gap: 30px;
+    }
+
+    .description-name-checkout {
+        font-size: 36px;
+    }
+    .description-text {
+        font-size: 24px
+    }
+}
+
+@media(min-width: 1340px) {
+    .wine-box {
+        width: 1040px;
+        height: 640px;
+    }
+    .wine-image {
+        width: 460px;
+        height: 620px;
+    }
+    .wine-checkout {
+        width: 460px;
+        height: 600px;
+        gap: 30px;
+    }
+
+    .quantity {
+        width: 80%;
+        height: 70px;
+    }
+     .buy-btn-details {
+            width: 140px;
+            height: 50px;
+        }
+
+    .quantity-number {
+        font-size: 36px;
+    }
+    .btn-minus, .btn-plus {
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+    }
+    .description-text {
+        font-size: 28px
+    }
+}

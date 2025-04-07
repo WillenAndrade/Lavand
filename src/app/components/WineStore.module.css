@@ -71,7 +71,8 @@
 .WineImage {
     width: 100%;
     height: 80%;
-    object-fit: cover;
+    object-fit:contain;
+    background-position: center;
 }
 
 .WineCard-description {

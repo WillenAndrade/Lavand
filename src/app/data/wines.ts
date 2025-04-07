@@ -134,7 +134,7 @@ const wines: Wine [] = [
   name: "Nave Sur",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/nave-sur.png",
   description: {
     origin: "D.O. Rueda, Espanha",
     method: "",
@@ -150,7 +150,7 @@ const wines: Wine [] = [
   name: "Finca Gabriel Malbec Rosé",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/finca-gabriel-malbec-rose.png",
   description: {
     origin: "Mendoza, Argentina",
     method: "",
@@ -166,7 +166,7 @@ const wines: Wine [] = [
   name: "Finca Gabriel Chardonnay",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/finca-gabriel-chardonnay.png",
   description: {
     origin: "Mendoza, Argentina",
     method: "",
@@ -182,7 +182,7 @@ const wines: Wine [] = [
   name: "Bondades Sauvignon Blanc",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/bondades-sauvignon-blanc.png",
   description: {
     origin: "Mendoza, Argentina",
     method: "",
@@ -198,7 +198,7 @@ const wines: Wine [] = [
   name: "Angosto",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/angosto.png",
   description: {
     origin: "D.O. Valência, Espanha",
     method: "",

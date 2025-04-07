@@ -37,10 +37,10 @@ const WineDetails = ({ params }: WineDetailsProps) => {
   return (
     <div className={styles["wine-container"]}>
       <div className={styles["wine-box"]}>
-        <div className={styles["wine-image"]} style={{ backgroundImage: `url(${wine.src})` }}>
+        <div className={styles["wine-image"]} style={{ maxHeight: "600px", backgroundImage: `url(${wine.src})`, backgroundPosition: "center", objectFit: "cover" }}>
 
           <div className={styles["wine-details"]}>
-            <h1 className={styles["description-name"]}>{wine.name}</h1>
+            
             <h2 className={styles["description-nationality"]}>
               ({wine.description.nationality})
             </h2>
@@ -50,15 +50,17 @@ const WineDetails = ({ params }: WineDetailsProps) => {
             <p className={styles["description-indication"]}>{wine.description.indication}</p>
           </div>
         </div>
+
         <div className={styles["wine-checkout"]}>
           <div className={styles["description-name-checkout-div"]}>
             <h1 className={styles["description-name-checkout"]}>{wine.name}</h1>
           </div>
           <h2 className={styles["description-grape"]}>{wine.description.grape}</h2>
+          <p className={styles["description-award"]}>{wine.description.award}</p>
           <h2 className={styles["description-price"]}>
             {wine.price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
           </h2>
-          <p className={styles["description-award"]}>{wine.description.award}</p>
+          
           <div className={styles["quantity"]}>
             <div className={styles["quantity-selector"]}>
               <div className={styles["btn-minus"]} onClick={handleDecrement}>

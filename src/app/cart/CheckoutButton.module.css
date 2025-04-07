@@ -6,7 +6,6 @@
     align-items: center;
     background: white;
     transition: 0.3s ease-in-out;
-    background:linear-gradient(to right, rgb(52, 221, 89), rgb(110, 228, 136), rgb(52, 221, 89));
 }
 
 .checkout-button {
