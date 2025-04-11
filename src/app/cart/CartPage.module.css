@@ -1,4 +1,5 @@
 .cart-container {
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,6 +35,7 @@
     font-size: 24px;
     color: rgb(138, 7, 29);
     cursor: pointer;
+    margin: 10px 0;
 }
   
 
@@ -47,11 +49,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     background-image: linear-gradient(to right, rgb(51, 3, 11), rgb(138, 7, 29));
     border: 1px solid rgb(236, 213, 82);
     border-radius: 40px;
-    padding: 0 4px;
+    padding: 0 5px;
 }
 
 .cart-quantity {
@@ -76,19 +78,30 @@
     background: rgb(109, 7, 24);
     cursor: pointer;
     border: 1px solid rgb(236, 213, 82);
+    transition: 0.3s ease-in-out;
 }
 
 .cart-btn-minus:hover, .cart-btn-more:hover {
     border: 1px solid rgb(236, 213, 82);
+    background: rgb(133, 8, 29);
 }
 
 .cart-delete-item {
     width: 30px;
     height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: white;
     border-radius: 40px;
     border: 1px solid rgb(236, 213, 82);
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 22px;
+}
+.cart-delete-item:hover {
+    border: 2px solid rgb(236, 213, 82);
+    color: rgb(236, 213, 82);
 }
 
 .cart-total-div {
@@ -120,12 +133,6 @@
     font-weight: lighter;
 }
 
-.cart-total-div:hover > .cart-total-div-h2-price {
-    font-size: 26px;
-}
-
-
-
 @media(min-width: 360px) {
     .wine-cart-description {
         height: 50px;
@@ -150,8 +157,8 @@
     }
     
     .wine-cart-image {
-        width: 140px;
-        height: 160px;
+        width: 160px;
+        height: 180px;
         Border: 1px solid rgb(138, 7, 29);
         border-radius: 15px;
         cursor: pointer;

@@ -5,6 +5,62 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 20px;
+    background-color: linear-gradient(to bottom, white, lavender);
+}
+
+.general-search {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.general-search:hover > .search-div {
+    display: flex;
+    width: 160px;
+    height: 60px;
+}
+
+.search-div{
+    width: 160px;
+    height: 60px;
+    background: linear-gradient(to bottom, lavender, lavender, white);
+    background-image: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 25px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 80px;
+    height: 60px;
+}
+
+.SearchInput {
+    width: 100px;
+    height: 45px;
+    font-size: 25px;
+    border-radius: 15px;
+    padding-left: 5px;
+    display: none;
+    transition: 0.3s ease-in-out;
+}
+.SearchInput::placeholder {
+    padding-left: 5px;
+}
+
+.faSearch {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.search-div:hover > .SearchInput {
+    display: flex;
+
 }
 
     .WineStore h2 {
@@ -49,6 +105,13 @@
     cursor: pointer;
     overflow: hidden;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    background: white;
+    transition: 0.3s ease-in-out;
+}
+
+.WineCard:hover {
+    border: 2px solid rgb(236, 213, 82);
+    
 }
 
     .WineName {
@@ -57,6 +120,7 @@
         color: rgb(61,99,69);
         color: rgb(23, 28, 30);
         color: rgb(61,99,69);
+        color: rgb(150, 23, 9);
         font-size: 22px;
         font-weight: lighter;
     }
@@ -97,23 +161,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     flex-direction: column;
     border-top: 1px solid rgb(236, 213, 82);
     border: none;
+    border-radius: 15px;
 }
        .WineCard #description-p {
-            font-size: 21px;
+            font-size: 18px;
             margin: 3px;
             color: rgb(109, 7, 24);
             color: rgb(236, 213, 82);
+            color: white;
 
        }
 
        .description-span {
         color: rgb(247, 221, 75);
         font-size: 20px;
-        margin: 5px 0 20px 0;
-        color: black;
        }
 
     .WineCard:hover .WineCard-description {

@@ -37,7 +37,7 @@ const WineDetails = ({ params }: WineDetailsProps) => {
   return (
     <div className={styles["wine-container"]}>
       <div className={styles["wine-box"]}>
-        <div className={styles["wine-image"]} style={{ maxHeight: "600px", backgroundImage: `url(${wine.src})`, backgroundPosition: "center", objectFit: "cover" }}>
+        <div className={styles["wine-image"]} style={{ maxHeight: "600px", backgroundImage: `url(${wine.src})`, backgroundPosition: "center", objectFit: "contain" }}>
 
           <div className={styles["wine-details"]}>
             

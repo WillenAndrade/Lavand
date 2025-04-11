@@ -5,7 +5,16 @@ import CheckoutButton from "./CheckoutButton"
 import styles from "./CartPage.module.css"
 import { useEffect } from "react";
 
+import { useRouter } from "next/navigation";
+
+import { RiDeleteBin6Line } from "react-icons/ri";
+
 export default function CartPage() {
+
+ const handleClickImage = (imgId) => {
+    
+    router.push(`/cart/${imgId}`);
+  };
 
   const { cart, removeFromCart, updateQuantityMinus, updateQuantityMore, clearCart } = useCart();
 
@@ -20,31 +29,31 @@ export default function CartPage() {
       <h1>Carrinho</h1>
       {cart.length === 0 ? (
         <div className={styles.emptyCart}>
-           <p>Your cart is currently empty.</p>
+           <p>Seu carrinho está vazio...</p>
            
         </div>
       ) : (
         <ul>
           {cart.map((item) => (
             <div className={styles["wine-cart"]} key={item.id}>
-              <div className={styles["wine-cart-image"]} style={{backgroundImage: `url(${item.src})`, backgroundSize: "cover", backgroundPosition: "center"}}></div>
+              <div className={styles["wine-cart-image"]} style={{backgroundImage: `url(${item.src})`, backgroundSize: "cover", backgroundPosition: "center"}} onClick={()=> handleClickImage(item.id)}></div>
               <div className={styles["wine-cart-description"]}>{item.name}</div>
               <div className={styles["wine-cart-buttons"]}>
                 <div className={styles["cart-btn-minus"]} disabled={item.quantity <= 1} onClick={() => updateQuantityMinus(item.id, item.quantity - 1)}>-</div>
                 <div className={styles["cart-quantity"]}>{item.quantity}</div>
                 <div className={styles["cart-btn-more"]} onClick={() => updateQuantityMore(item.id, item.quantity + 1)}>+</div>
-                <div className={styles["cart-delete-item"]} onClick={() => removeFromCart(item.id)}></div>
+                <div className={styles["cart-delete-item"]} onClick={() => removeFromCart(item.id)}><RiDeleteBin6Line /></div>
               </div>
             </div>
           ))}
         </ul>
       )}
 
-      <div className={styles["cart-total-div"]}>
+      {cart.length > 0 && <div className={styles["cart-total-div"]}>
         <h2 className={styles["cart-total-div-h2"]}>Total</h2>
         <h2 className={styles["cart-total-div-h2-price"]}>{totalPrice.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</h2>
-      </div>
-      <CheckoutButton />
+      </div>}
+      {cart.length > 0 && <CheckoutButton />}
     </div>
   );
 }

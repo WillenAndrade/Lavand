@@ -118,7 +118,7 @@ const wines: Wine [] = [
   name: "Marques de la Vega",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/marques-de-la-vega.png",
   description: {
     origin: "D.O La Mancha, Espanha",
     method: "",
@@ -134,7 +134,7 @@ const wines: Wine [] = [
   name: "Nave Sur",
   owner: "Angosto",
   price: 89.90,
-  src: "/nave-sur.png",
+  src: "/nave-sur-4.png",
   description: {
     origin: "D.O. Rueda, Espanha",
     method: "",
@@ -182,7 +182,7 @@ const wines: Wine [] = [
   name: "Bondades Sauvignon Blanc",
   owner: "Angosto",
   price: 89.90,
-  src: "/bondades-sauvignon-blanc.png",
+  src: "/bondades-sauvignon-blanc.jpg",
   description: {
     origin: "Mendoza, Argentina",
     method: "",
@@ -198,7 +198,7 @@ const wines: Wine [] = [
   name: "Angosto",
   owner: "Angosto",
   price: 89.90,
-  src: "/angosto.png",
+  src: "/angosto4.jpg",
   description: {
     origin: "D.O. Valência, Espanha",
     method: "",
@@ -214,7 +214,7 @@ const wines: Wine [] = [
   name: "Quinta de Gomariz Loureiro",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/quinta-de-gomariz-loureiro-3.png",
   description: {
     origin: "Vinhos verdes Portugal",
     method: "",
@@ -230,7 +230,7 @@ const wines: Wine [] = [
   name: "Quinta de Gomariz Alvarinho",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/quinta-de-gomariz-alvarinho-3.png",
   description: {
     origin: "Vinhos verdes, Portugal",
     method: "",
@@ -246,7 +246,7 @@ const wines: Wine [] = [
   name: "Marguerite Torrontés",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/marguerite-torrontes-.png",
   description: {
     origin: "Mendoza Argentina",
     method: "",
@@ -299,7 +299,7 @@ const wines: Wine [] = [
     origin: "D.O. Utiel-Requena, Espanha",
     method: "",
     grape: "100% Bobal (Variedade autóctone)",
-    aromaticProfile: "Aroma de frutos vermelhos, leves notas de especiarias e toda influência do mar mediterraneo para oferecer um rosé com autêntic equilíbrio, frescor e plenitude ao paladar ",
+    aromaticProfile: "Aroma de frutos vermelhos, leves notas de especiarias e toda influência do mar mediterrâneo para oferecer um rosé com autêntic equilíbrio, frescor e plenitude ao paladar ",
     nationality: "Espanha",
     coloring: "Rosado claro límpido e brilhante",
     indication: "Aperitivos, saladas, pizzas, carnes brancas, sushi e sashimi, peixes e frutos do mar",
