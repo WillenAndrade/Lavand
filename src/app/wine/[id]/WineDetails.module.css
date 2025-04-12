@@ -242,7 +242,8 @@
 
 @media(min-width: 600px) {
     .wine-container {
-        height: 100vh;
+        height: 170vh;
+        
     }
     .wine-box {
         width: 600px;
