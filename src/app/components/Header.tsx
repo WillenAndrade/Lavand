@@ -1,3 +1,6 @@
+/**
+ 
+
 "use client"
 
 import Link from "next/link"
@@ -14,9 +17,9 @@ export function Header() {
     }
 
     return (
-        <div className={styles.headerComponent}>
+        <div className={isOpen ? `${styles.headerComponent} active` : styles.headerComponent }>
            
-            <div className={styles.hamburger} onClick={toggleMenu}>
+            <div className={isOpen ? `${styles.hamburger} active` : styles.hamburger} onClick={toggleMenu}>
                 <div className={styles.line}></div>
                 <div className={styles.line}></div>
                 <div className={styles.line}></div>
@@ -45,69 +48,26 @@ export function Header() {
     )
 }
 
-/**
-
-"use client"
-import Link from "next/link"
-import { useState } from "react";
-import styles from "./Header.module.css"
-
-import { HiOutlineShoppingCart } from "react-icons/hi2";
-import { PiShoppingCartSimpleFill } from "react-icons/pi";
-import { BiCart } from "react-icons/bi";
-import { LuShoppingCart } from "react-icons/lu";
-
-    export function Header  () {
-
-        const [isOpen, setIsOpen] = useState(false);
-
-        const toggleMenu = () => {
-            setIsOpen(!isOpen);
-          };
-
-    return(
-        <div className={styles.headerComponent}>
-
-            <div className={styles.hamburger} onClick={toggleMenu}>
-                <div className={styles.line}></div>
-                <div className={styles.line}></div>
-                <div className={styles.line}></div>
-            </div>
-
-            <Link href="/" className={styles["Link-to-Home"]}><div className={styles["logo-div"]}></div></Link>
-            
-            <div className={styles["menu-icon"]}></div>
-                {isOpen && (<nav>
-                    <ul className={styles["nav-ul"]}>
-                        <li className={styles["nav-li"]}>
-                            <Link className={styles["Link-to"]} href="/">Home</Link>
-                            <Link className={styles["Link-to"]} href="/">Bônus</Link>
-                            <Link className={styles["Link-to"]} href="/">FeedBack</Link>
-                        </li>
-                    </ul>
-                </nav>)}
-            <div className={styles["link-to-cart-div"]}><Link className={styles["link-to-cart"]} href="/cart"><LuShoppingCart /></Link></div>
-         </div>
-    )
-}
 
  */
+
 
 /*
 
     .headerComponent {
     width: 100%;
     height: 120px;
-    background-color: rgb(77,28,35);
+    background: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 16px;
     padding: 0;
     box-sizing: border-box;
-    background-image: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
     border-bottom: 3px solid rgb(236, 213, 82);
+    position: relative;
 }
+
 
 .logo-div {
     width: 90px;
@@ -119,120 +79,186 @@ import { LuShoppingCart } from "react-icons/lu";
     border: 1px solid white;
     transition: 0.3s ease-in-out;
     padding: 5px;
-    margin: 0 20px; 
+    margin: 0 20px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .logo-div:hover {
     border: 2px solid rgb(236, 213, 82);
-
 }
 
 .hamburger {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    background: black;
-    transition: 0.3 ease-in-out;
-}
-.line {
-    width: 100%;
-    height: 3px;
-    background-color: green;
-    margin: 5px 0;
-  }
-
-.headerComponent h1 {
-    margin-left: 20px;
-    color: gold;
-    cursor: pointer;
-}
-
-.headerComponent h2 {
+    width: 50px;
+    height: 55px;
+    background: rgb(82, 5, 18);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(168, 156, 84);
-    color: white;
-    font-size: 25px;
-    padding-left: 10px;
+    cursor: pointer;
+    display: none; 
 }
 
+.line {
+    width: 90%;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s ease-in-out
+}
 
 .nav {
-    color: white;
     margin-right: 20px;
+    transition: 0.3s ease-in-out
 }
+
 .nav-ul {
     display: flex;
-    
+    padding: 0;
+    margin: 0;
+    transition: 0.3s ease-in-out
 }
+
 .nav-li {
     list-style: none;
-    margin-right: 20px;
+    display: flex;
 }
 
-.Link-to-Home {
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 22px;
-    margin: 0 10px;
-    color: white;
-    cursor: pointer;
-}
-
-.Link-to{
-    list-style-type: none;
+.Link-to-Home,
+.Link-to,
+.link-to-cart {
+    list-style: none;
     text-decoration: none;
     font-size: 22px;
     margin: 0 10px;
     color: white;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+}
+
+.Link-to:hover,
+.link-to-cart:hover {
+    color: rgb(236, 213, 82);
 }
 
 .link-to-cart-div {
     width: 50px;
     height: 55px;
-    background: rgb(109, 7, 24);
     background: rgb(82, 5, 18);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin: 0 30px;
-    border: none;
     border: 1px solid white;
     transition: 0.3s ease-in-out;
+    margin: 0 20px;
 }
 
-.link-to-cart-div:hover{
+.link-to-cart-div:hover {
     border: 2px solid white;
-    width: 50px;
-    height: 55px;
 }
 
-.link-to-cart{
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 22px;
-    margin: 0 10px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    border-radius: 40px;
+.link-to-cart {
     font-size: 30px;
-    cursor: pointer;
 }
 
-.Link-to:hover {
-    font-size: 24px;
-    color: rgb(236, 213, 82);
-}
+/* --- Responsive --- *//*
+@media (max-width: 768px) {
+    
+    .hamburger {
+        display: block;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 50px;
+        padding: 10px;
+        border: 1px solid white;
+        margin: 0 20px;
+        transition: 0.3s ease-in-out;
+    }
+    .hamburger.active {
+        background: white;
+    }
 
-.Link-to-cart:hover {
-    font-size:32px;
-    color: rgb(236, 213, 82);
-}
+    .nav {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(109, 7, 24);
+        border-top: 1px solid white;
+        display: none;
+        transition: 0.3s ease-in-out;
+    }
 
+    .nav.open {
+        display: block;
+        z-index: 1000;
+        height: 100px;
+    }
+
+    .nav-ul {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .nav-li {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+}
 
 */
+
+"use client"
+
+import Link from "next/link"
+import { useState } from "react"
+import styles from "./Header.module.css"
+import { LuShoppingCart } from "react-icons/lu"
+
+export function Header() {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen)
+    }
+
+    return (
+        <div className={`${styles.headerComponent} ${isOpen ? styles.active : ""}`}>
+            {/* Hamburger menu */}
+            <div 
+                className={`${styles.hamburger} ${isOpen ? styles.active : ""}`} 
+                onClick={toggleMenu}
+            >
+                <div className={styles.line}></div>
+                <div className={styles.line}></div>
+                <div className={styles.line}></div>
+            </div>
+
+            {/* Logo */}
+            <Link href="/" className={styles["Link-to-Home"]}>
+                <div className={styles["logo-div"]}></div>
+            </Link>
+
+            {/* Navigation */}
+            <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
+                <ul className={styles["nav-ul"]}>
+                    <li className={styles["nav-li"]}>
+                        <Link className={styles["Link-to"]} href="/">Home</Link>
+                        <Link className={styles["Link-to"]} href="/">Bônus</Link>
+                        <Link className={styles["Link-to"]} href="/">FeedBack</Link>
+                    </li>
+                </ul>
+            </nav>
+
+            {/* Cart Icon */}
+            <div className={styles["link-to-cart-div"]}>
+                <Link className={styles["link-to-cart"]} href="/cart">
+                    <LuShoppingCart />
+                </Link>
+            </div>
+        </div>
+    )
+}
