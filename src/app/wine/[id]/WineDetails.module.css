@@ -277,6 +277,11 @@
 }
 
 @media(min-width: 720px) {
+    .wine-container {
+        height: 200vh;
+        
+    }
+
     .wine-image {
         width: 380px;
         height: 480px;
@@ -298,6 +303,11 @@
 }
 
 @media (min-width: 820px) {
+    .wine-container {
+        height: 180vh;
+        
+    }
+    
     .wine-image {
         width: 380px;
         height: 460px;
@@ -315,18 +325,22 @@
 }
 
 @media(min-width: 1024px) {
+    .wine-container {
+        height: 150vh;
+    }
     
     .wine-box {
         width: 600px;
-        height: 540px;
+        height: 500px;
+        background:lightblue;
     }
     .wine-image {
-        width: 380px;
-        height: 500px;
+        width: 340px;
+        height: 440px;
     }
     .wine-checkout {
-        width: 380px;
-        height: 480px;
+        width: 340px;
+        height: 440px;
         gap: 20px;
     }
     .description-text {
