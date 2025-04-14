@@ -8,6 +8,7 @@ import { WineCarousel } from "./components/WineCarousel";
 export default function Home() {
   return (
     <div className="homeContainer"> 
+    <WineCarousel />
       <WineStore />
     </div>
   );

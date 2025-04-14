@@ -5,7 +5,7 @@ import styles from "../components/WineCarousel.module.css"
 
 export function WineCarousel () {
 
-    const slides = ["/almendros.png", "/pazo-torrado.png", "/marques-de-la-concordia-reserva.png"];
+    const slides = ["/Wine-Promotion-small.png"];
     
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -30,13 +30,8 @@ export function WineCarousel () {
                    <p id={styles["prev-btn"]}>&lt;</p>
                 </div>
                 <div className={styles["carousel-slide"]} >
-                    <div className={styles["wine-image-div"]} style={{ backgroundImage: `url(${slides[currentIndex]})` }}>
+                    <div className={styles["wine-image-div"]} style={{ backgroundImage: `url(${slides[currentIndex]})`}}>
                     </div>
-                        <div className={styles["wine-offer-div"]}>
-                            <h2>Nome do vinho</h2>
-                            <h3>Composição</h3>
-                            <h3>Coloração</h3>
-                        </div>
                 </div>
                 <div className={styles["carousel-btn next"]} onClick={nextSlide}>
                         <p id={styles["next-btn"]}>&gt;</p>
