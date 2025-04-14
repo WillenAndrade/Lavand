@@ -214,7 +214,7 @@ const wines: Wine [] = [
   name: "Quinta de Gomariz Loureiro",
   owner: "Angosto",
   price: 89.90,
-  src: "/quinta-de-gomariz-loureiro-3.png",
+  src: "/quinta-de-gomariz-loureiro.png",
   description: {
     origin: "Vinhos verdes Portugal",
     method: "",
@@ -246,7 +246,7 @@ const wines: Wine [] = [
   name: "Marguerite Torrontés",
   owner: "Angosto",
   price: 89.90,
-  src: "/marguerite-torrontes-.png",
+  src: "/marguerite-torrontes.png",
   description: {
     origin: "Mendoza Argentina",
     method: "",
@@ -262,7 +262,7 @@ const wines: Wine [] = [
   name: "Quinta de Gomariz Grande Escolha",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/quinta-de-gomariz-grande-escolha.png",
   description: {
     origin: "Vinhos verdes, Portugal",
     method: "",
@@ -278,7 +278,7 @@ const wines: Wine [] = [
   name: "Solar das Mouras",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/solar-das-mouras.png",
   description: {
     origin: "Alentejo Portugal",
     method: "",
@@ -294,7 +294,7 @@ const wines: Wine [] = [
   name: "Identidad Rose",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/identidad-rose.png",
   description: {
     origin: "D.O. Utiel-Requena, Espanha",
     method: "",
@@ -308,9 +308,9 @@ const wines: Wine [] = [
 }, {
   id: 19,
   name: "Cullerot",
-  owner: "Angosto",
+  owner: "cullerot",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/cullerot.png",
   description: {
     origin: "D.O Valência, Espanha",
     method: "6 meses ânforas/talhas de barro",
@@ -326,7 +326,7 @@ const wines: Wine [] = [
   name: "Licenciado Reserva",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/licenciado-reserva.png",
   description: {
     origin: "D.O Ca La Rioja",
     method: "18 meses em Barrica de carvalho",
@@ -342,7 +342,7 @@ const wines: Wine [] = [
   name: "Barrica Andina Pinot Noir",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/barrica-andina-pinot-noir.png",
   description: {
     origin: "Vale de Maule, Chile",
     method: "3 meses barrica de carvalho",
@@ -356,9 +356,9 @@ const wines: Wine [] = [
 }, {
   id: 22,
   name: "Barrica Andina Carménère",
-  owner: "Angosto",
+  owner: "barrica-andina-carmenere",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/barrica-andina-carmenere.png",
   description: {
     origin: "Valle Central Chile",
     method: "",
@@ -374,7 +374,7 @@ const wines: Wine [] = [
   name: "Romanico",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/romanico.png",
   description: {
     origin: "D.O - Toro, Espanha",
     method: "6 meses barrica de carvalho francês",
@@ -390,7 +390,7 @@ const wines: Wine [] = [
   name: "Cuarenta Vendimias Seleccion Especial",
   owner: "Angosto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/quarenta-vendimias-seleccion-especial.png",
   description: {
     origin: "D.O Ribera del Duero, Espanha",
     method: "9 meses barrica de carvalho",
@@ -404,9 +404,9 @@ const wines: Wine [] = [
 }, {
   id: 25,
   name: "Almendros Tinto",
-  owner: "Angosto",
+  owner: "almendros-tinto",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/almendros-tinto.png",
   description: {
     origin: "D.O - Valência, Espanha",
     method: "5 meses barrica carvalho francês",
@@ -420,9 +420,9 @@ const wines: Wine [] = [
 }, {
   id: 26,
   name: "Legitim de Miller",
-  owner: "Angosto",
+  owner: "legitim-de-miller",
   price: 89.90,
-  src: "/almendros.png",
+  src: "/legitim-de-miller.png",
   description: {
     origin: "D.O Ca Priorat",
     method: "12 meses barrica carvalho francês",
@@ -436,9 +436,9 @@ const wines: Wine [] = [
 }, {
   id: 27,
   name: "Privado Reserva Malbec",
-  owner: "",
+  owner: "qualquer",
   price: 89.90,
-  src: "",
+  src: "/privado-reserva-malbec.png",
   description: {
     origin: "Mendoza Argentina",
     method: "12 meses barrica carvalho",
@@ -452,9 +452,9 @@ const wines: Wine [] = [
 }, {
   id: 28,
   name: "Finca los Príncipes Trempanillo",
-  owner: "",
+  owner: "qualquer",
   price: 89.90,
-  src: "",
+  src: "/finca-los-principes-trempanillo.png",
   description: {
     origin: "D.O. Ca. - La Rioja, Espanha",
     method: "",
@@ -470,7 +470,7 @@ const wines: Wine [] = [
   name: "Burgo Viejo Crianza",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/burgo-viejo-crianza.png",
   description: {
     origin: "D.O.C.a - La Rioja, Espanha",
     method: "12 meses barrica carvalho",
@@ -486,7 +486,7 @@ const wines: Wine [] = [
   name: "Bondades Malbec",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/bondades-malbec.png",
   description: {
     origin: "Mendoza Argentina",
     method: "",
@@ -502,7 +502,7 @@ const wines: Wine [] = [
   name: "Solar das Mouras",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/solar-das-mouras.png",
   description: {
     origin: "Alentejo, Portugal",
     method: "",
@@ -518,7 +518,7 @@ const wines: Wine [] = [
   name: "Solar das Mouras Reserva",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/solar-das-mouras-reserva.png",
   description: {
     origin: "Alentejo, Portugal",
     method: "4 meses barrica carvalho",
@@ -534,7 +534,7 @@ const wines: Wine [] = [
   name: "Qunqy Roble Malbec",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/qunqy-roble-malbec.png",
   description: {
     origin: "Mendoza, Argentina",
     method: "6 meses barrica carvalho",
@@ -550,7 +550,7 @@ const wines: Wine [] = [
   name: "Qunqy Roble Cabernet Sauvignon",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/qunqy-roble-cabernet-sauvignon.png",
   description: {
     origin: "Mendoza, Argentina",
     method: "6 meses barrica de carvalho",
@@ -566,7 +566,7 @@ const wines: Wine [] = [
   name: "Privado Reserva Cabernet Franc",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/privado-reserva-cabernet-franc.png",
   description: {
     origin: "Mendoza Argentina",
     method: "12 meses barrica de carvalho",
@@ -582,7 +582,7 @@ const wines: Wine [] = [
   name: "Ladron de Lunas",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/ladron-de-lunas.png",
   description: {
     origin: "Utiel - Requena, Espanha",
     method: "5 meses barrica carvalho francês",
@@ -598,7 +598,7 @@ const wines: Wine [] = [
   name: "Jorge Rubio Gran Reserva Malbec",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/jorge-rubio-gran-reserva-malbec.png",
   description: {
     origin: "Mendoza, Argentina",
     method: "18 meses barrica de carvalho francês",
@@ -614,7 +614,7 @@ const wines: Wine [] = [
   name: "Marques de la Vega",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/marques-de-la-vega.png",
   description: {
     origin: "D.O - La Mancha, Espanha",
     method: "12 meses barrica carvalho francês",
@@ -630,7 +630,7 @@ const wines: Wine [] = [
   name: "Finca Gabriel Roble Malbec",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/finca-gabriel-roble-malbec.png",
   description: {
     origin: "Mendoza, Argentina",
     method: "6 meses barrica de carvalho ",
@@ -646,7 +646,7 @@ const wines: Wine [] = [
   name: "Finca Gabriel Roble Cabernet Sauvignon",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/finca-gabriel-roble-cabernet-sauvignon.png",
   description: {
     origin: "Mendoza, Argentina",
     method: "12 meses barrica carvalho francês",
@@ -662,7 +662,7 @@ const wines: Wine [] = [
   name: "Conde de Arraiolos",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/conde-de-arraiolos.png",
   description: {
     origin: "Alentejo, Portugal",
     method: "6 meses barrica de carvalho",
@@ -678,7 +678,7 @@ const wines: Wine [] = [
   name: "Burgo Viejo Garnacha",
   owner: "",
   price: 89.90,
-  src: "",
+  src: "/burgo-viejo-garnacha.png",
   description: {
     origin: "D.O.C.a - La Rioja, Espanha",
     method: "",

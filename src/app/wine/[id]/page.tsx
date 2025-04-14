@@ -7,12 +7,12 @@ import { useCart } from "@/app/cart/Cart";
 import React from "react";
 import Link from "next/link";
 
-
 type WineDetailsProps = {
   params: Promise<{ id: string }>;
 };
 
 const WineDetails = ({ params }: WineDetailsProps) => {
+
   const resolvedParams = React.use(params); 
   const wine = wines.find((w) => w.id === parseInt(resolvedParams.id));
   const { cart, addToCart } = useCart();
