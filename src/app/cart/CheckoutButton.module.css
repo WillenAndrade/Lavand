@@ -12,25 +12,22 @@
     width: 140px;
     height: 50px;
     padding: 0 10px;
+    font-weight: lighter;
     border-radius: 40px;
     margin: auto;
-    color: rgb(236, 213, 82);
     font-size: 26px;
     cursor: pointer;
-    border: 2px solid rgb(163, 147, 52);
-    border: 3px solid rgb(236, 213, 82);
-    border: 3px solid white;
-    color: rgb(236, 213, 82);
-    color: white;
     font-weight: lighter;
     background: white;
-    background: rgb(109, 7, 24);
     transition: 0.3s ease-in-out;
+    border: 2px solid rgb(236, 213, 82);
+    color: rgb(236, 213, 82);
+    background: rgb(109, 7, 24);
 }
 
 .checkout-button:hover {
-    border: 3px solid rgb(236, 213, 82);
+    border: 3px solid rgb(247, 225, 101);
     color: white;
-    color: rgb(236, 213, 82);
+    color: rgb(247, 225, 101);
     background: rgb(109, 7, 24);
 }
