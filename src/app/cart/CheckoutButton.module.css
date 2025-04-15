@@ -23,6 +23,7 @@
     border: 2px solid rgb(236, 213, 82);
     color: rgb(236, 213, 82);
     background: rgb(109, 7, 24);
+    margin-bottom: 30px;
 }
 
 .checkout-button:hover {
