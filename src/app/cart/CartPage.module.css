@@ -1,4 +1,6 @@
 .cart-container {
+    width: 100%;
+    min-height: 100vh;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -10,7 +12,7 @@
   .wine-cart {
     display: flex;
     flex-direction: column;
-    height: 400px;
+    height: 450px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -44,8 +46,8 @@
 }
 
 .wine-cart-buttons {
-    width: 180px;
-    height: 45px;
+    width: 200px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,6 +106,14 @@
     color: rgb(236, 213, 82);
 }
 
+.empty-cart {
+    width: 100%;
+    height: 20dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .cart-total-div {
     width: 100%;
     height: 120px;
@@ -125,6 +135,7 @@
     flex-direction: column;
     color: rgb(52, 221, 89);
     margin-top: 20px;
+    font-size: 26px;
 }
 
 .cart-total-div-h2-price {
@@ -132,17 +143,23 @@
     transition: 0.3s ease-in-out;
     cursor: pointer;
     font-weight: lighter;
+    font-size: 30px;
 }
+
 
 @media(min-width: 360px) {
     .wine-cart-description {
         height: 50px;
         
     }
+    .empty-cart {
+        height: 30vh;
+    }
 }
 
 @media(min-width: 500px) {
     .wine-cart {
+        height: 400px;
         flex-direction: row;
     }
     .wine-cart {
@@ -155,6 +172,11 @@
         justify-content: center;
         position: relative;
         transition: 0.3s ease-in-out;
+    }
+
+    .wine-cart-buttons {
+        width: 180px;
+        height: 45px;
     }
     
     .wine-cart-image {
@@ -169,4 +191,14 @@
         transform: translateY(-14px);
         border: 2px solid rgb(236, 213, 82); 
     }
+    .empty-cart {
+        height: 100dvh;
+    }
+    
 }
+
+    @media(min-width: 600px) {
+        .empty-cart {
+            height: 100dvh;
+        }
+    }

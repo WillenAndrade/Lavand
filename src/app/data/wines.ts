@@ -614,7 +614,7 @@ const wines: Wine [] = [
   name: "Marques de la Vega",
   owner: "",
   price: 89.90,
-  src: "/marques-de-la-vega.png",
+  src: "/marques-de-la-vega3.png",
   description: {
     origin: "D.O - La Mancha, Espanha",
     method: "12 meses barrica carvalho francês",

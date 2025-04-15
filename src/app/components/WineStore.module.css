@@ -7,6 +7,17 @@
     flex-direction: column;
     margin-top: 20px;
     background-color: linear-gradient(to bottom, white, lavender);
+    margin-bottom: 20px;
+}
+
+.wine-call-to-action {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px; 
+    background: lightseagreen;
+    color: black;
 }
 
 .general-search {

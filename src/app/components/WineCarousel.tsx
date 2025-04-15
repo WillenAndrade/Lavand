@@ -30,7 +30,7 @@ export function WineCarousel () {
                    <p id={styles["prev-btn"]}>&lt;</p>
                 </div>
                 <div className={styles["carousel-slide"]} >
-                    <div className={styles["wine-image-div"]} style={{ backgroundImage: `url(${slides[currentIndex]})`}}>
+                    <div className={styles["wine-image-div"]} style={{ backgroundImage: `url(${slides[currentIndex]})`, backgroundRepeat: "no-repeat"}}>
                     </div>
                 </div>
                 <div className={styles["carousel-btn next"]} onClick={nextSlide}>

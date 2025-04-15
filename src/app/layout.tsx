@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { Header } from "./components/Header";
+import  Footer  from "./components/Footer";
 import { quicksand } from './fonts'
 import  ClientProvider  from "../app/cart/ClientProvider"
 import "./globals.css";
@@ -22,6 +23,7 @@ export default function RootLayout({
           <Header />
           {children}
         </ClientProvider>
+        <Footer />
       </body>
     </html>
   );

@@ -42,7 +42,7 @@ const WineDetails = ({ params }: WineDetailsProps) => {
           <div className={styles["wine-details"]}>
             
             <h2 className={styles["description-nationality"]}>
-              ({wine.description.nationality})
+              {wine.description.nationality}
             </h2>
             <p className={styles["description-text"]}>
               "{wine.description.aromaticProfile}"

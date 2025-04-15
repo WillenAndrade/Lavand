@@ -91,16 +91,17 @@ export function WineStore() {
 
   return (
     <div className={styles.WineStore}>
+      <h2 className={styles["wine-call-to-action"]}>Vai um vinho aí?</h2>
       <div className={styles["general-search"]}>  
         <div className={styles["search-div"]}>
-        <input
-          type="text"
-          placeholder="Buscar"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className={styles.SearchInput}
-          />
-        <FaSearch className={styles.faSearch}/>
+          <input
+            type="text"
+            placeholder="Buscar"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className={styles.SearchInput}
+            />
+            <FaSearch className={styles.faSearch}/>
         </div>
       </div>
       <div className={styles.WineGrid}>

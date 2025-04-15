@@ -30,7 +30,7 @@ export default function CartPage() {
     <div className={styles["cart-container"]}>
       <h1>Carrinho</h1>
       {cart.length === 0 ? (
-        <div className={styles.emptyCart}>
+        <div className={styles["empty-cart"]}>
            <p>Seu carrinho está vazio...</p>
            
         </div>
@@ -55,7 +55,6 @@ export default function CartPage() {
         <h2 className={styles["cart-total-div-h2"]}>Total</h2>
         
         <h2 className={styles["cart-total-div-h2-price"]}>{totalPrice.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</h2>
-        <h3 className={"cart-total-div-discount"}>15% de desconto na primeira compra!</h3>
       </div>}
       {cart.length > 0 && <CheckoutButton />}
     </div>

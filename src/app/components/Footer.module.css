@@ -1,0 +1,34 @@
+.footer-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+    border-top: 2px solid rgb(236, 213, 82);
+}
+
+.footer-promotional {
+    font-size: 14px;
+    color: white;
+    font-weight: lighter;
+    padding: 0 10px;
+}
+
+.footer-link {
+    color: rgb(236, 213, 82);
+}
+
+@media(min-width: 360px) {
+    .footer-promotional {
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 600px) {
+    .footer-promotional {
+        font-size: 18px;
+    }
+}
