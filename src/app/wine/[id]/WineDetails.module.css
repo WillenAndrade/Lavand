@@ -242,7 +242,7 @@
     }
     .wine-box {
         width: 600px;
-        height: 500px;
+        min-height: 500px;
         display: flex;
         flex-direction: row;
         padding: 10px;
