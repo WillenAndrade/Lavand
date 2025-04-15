@@ -12,6 +12,7 @@
 
   .cart-h1 {
     color: rgb(138, 7, 29);
+    color: black;
     margin-bottom: 30px;
   }
 
@@ -155,6 +156,7 @@
     font-size: 30px;
     color: rgb(52, 221, 89);
     transition: 0.3s ease-in-out;
+    margin-bottom: 10px;
 }.cart-total-div-h2-price:hover {
     color: rgb(51, 134, 69);
 }

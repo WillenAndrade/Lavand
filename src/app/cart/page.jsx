@@ -28,7 +28,7 @@ export default function CartPage() {
 
   return (
     <div className={styles["cart-container"]}>
-      <h1>Carrinho</h1>
+      <h1 className={styles["cart-h1"]}>Carrinho</h1>
       {cart.length === 0 ? (
         <div className={styles["empty-cart"]}>
            <p>Seu carrinho está vazio...</p>
