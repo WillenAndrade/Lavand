@@ -2,21 +2,21 @@
 
 import styles from "./CheckoutButton.module.css"
 
-import { useCart } from "./Cart";
+import { useCart } from "./CartContext";
 
+import type { CartItem } from "./CartContext";
 
 const createPreference = async () => {
   const { cart } = useCart();
   
   const preference = {
-    items: cart.map((item) => ({
+    items: cart.getItems().map((item: CartItem) => ({
       title: item.name,
       unit_price: item.price,
       quantity: item.quantity,
     })),
-    currency_id: "BRL", 
+    currency_id: "BRL",
   };
-
 
   console.log("Preference for Mercado Pago:", preference);
 };

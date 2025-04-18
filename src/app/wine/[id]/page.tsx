@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import wines from "../../data/wines";
 import styles from "./WineDetails.module.css";
 import BuyButton from "@/app/components/BuyButton";
-import { useCart } from "@/app/cart/Cart";
+import { useCart } from "@/app/cart/CartContext";
 import React from "react";
 import Link from "next/link";
 
