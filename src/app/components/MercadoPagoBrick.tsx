@@ -2,12 +2,6 @@
 
 import { useEffect } from "react";
 
-declare global {
-    interface Window {
-      MercadoPago: any;
-    }
-  }
-
 export const MercadoPagoBrick = () => {
   useEffect(() => {
     const script = document.createElement("script");
