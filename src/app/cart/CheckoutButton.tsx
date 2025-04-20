@@ -35,7 +35,7 @@ const CheckoutButton = () => {
     docNumber: "",
     email: "",
     installments: 1,
-    
+
   });
 
   useEffect(()=> {
@@ -152,12 +152,27 @@ const CheckoutButton = () => {
     }
   };
 
+        useEffect(()=> {
+         if(pixPaymentMethod) {
+          setPixPaymentMethod(false)
+         }
+        }
+      ,[cardPaymentMethod])
+
+      useEffect(()=> {
+        if(cardPaymentMethod) {
+          setCardPaymentMethod(false)
+         }
+      }
+      ,[pixPaymentMethod])
+
   return (
     <div className={
       cardPaymentMethod || pixPaymentMethod
         ?  `${styles['choose-payment-method']} ${styles.active}`
         : styles['choose-payment-method']
     }>
+                 
                   {!cardPaymentMethod ? <div className={styles["card-icon-div"]} onClick={() => setCardPaymentMethod(true)}><span className={styles["card-span"]}>Cartão</span></div> :  <div className={styles["checkout-button-div"]}>
 
             <form onSubmit={handleSubmit} className={styles["payment-form"]}>
@@ -289,3 +304,5 @@ const CheckoutButton = () => {
 };
 
 export default CheckoutButton;
+
+//  {!pixPaymentMethod ? <div className={styles["pix-icon-div"]} onClick={() => setPixPaymentMethod(true)}></div>: <div className={styles["checkout-pix-div"]}></div>}

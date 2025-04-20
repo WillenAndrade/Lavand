@@ -45,11 +45,16 @@
     background: rgb(109, 7, 24);
 }
 
-.card-icon-pix {
-    width: 200px;
+.pix-icon-div {
+    width: 160px;
     height: 100px;
     border: 2px solid rgb(100, 100, 211);
     border-radius: 20px;
+    background-image: url("/lavand/public/pixLogo2.webp");
+    background-size: center;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 0 5px;
 }
 
 .card-icon-div {
@@ -65,6 +70,7 @@
     background-image: linear-gradient(to right, rgb(138, 7, 29), rgb(51, 3, 11), rgb(51, 3, 11));
     background-image: linear-gradient(to right, rgb(2, 180, 2), rgb(8, 212, 8), rgb(2, 180, 2));
     transition: 0.3s ease-in-out;
+    margin: 0 5px;
 } 
   .card-icon-div:hover{
     transform: translateY(-10px);
