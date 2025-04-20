@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import Script from "next/script";
 import { Header } from "./components/Header";
 import  Footer  from "./components/Footer";
 import { quicksand } from './fonts'
@@ -24,7 +24,12 @@ export default function RootLayout({
           {children}
         </CartProvider>
         <Footer />
+        <Script
+            src="https://sdk.mercadopago.com/js/v2"
+            strategy="beforeInteractive"
+            />
       </body>
+
     </html>
   );
 }

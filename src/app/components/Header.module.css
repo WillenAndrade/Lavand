@@ -17,7 +17,6 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Logo */
 .logo-div {
     width: 90px;
     height: 90px;
@@ -33,7 +32,7 @@
 }
 
 .logo-div:hover {
-    border: 2px solid rgb(236, 213, 82);
+    border: 1px solid rgb(236, 213, 82);
     transform: scale(1.1);
 }
 

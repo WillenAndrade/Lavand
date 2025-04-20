@@ -140,6 +140,7 @@
             color: rgb(243, 213, 44);
             text-align: center;
             font-size: 26px;
+            padding: 0 20px;
         }
     .description-nationality-checkout {
         font-size: 16px;
@@ -285,7 +286,7 @@
     }
     .buy-btn-details {
         height: 35px;
-        margin-right: 2px;
+        margin-right: 7px;
     }
 
 }
@@ -306,7 +307,7 @@
     }
     
     .description-name-checkout {
-        font-size: 30px;
+        font-size: 28px;
     }
     .description-text {
         font-size: 16px
@@ -320,6 +321,9 @@
 }
 
 @media (min-width: 820px) {
+    .wine-box {
+         height: 420px;
+    }
     .wine-image {
         width: 400px;
         height: 360px;
@@ -367,15 +371,16 @@
 
 @media(min-width: 1200px) {
     .wine-box {
-        width: 940px;
+        width: 840px;
         height: 560px;
     }
+    
     .wine-image {
-        width: 470px;
+        width: 420px;
         height: 540px;
     }
     .wine-checkout {
-        width: 470px;
+        width: 420px;
         height: 540px;
         gap: 30px;
     }

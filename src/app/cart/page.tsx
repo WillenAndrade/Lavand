@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import { useCart } from "@/app/cart/CartContext";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useEffect } from "react";
 import styles from "./CartPage.module.css";
-import CheckoutButton from "./CheckoutButton"
+import CheckoutButton from "./CheckoutButton";
 
 export default function CartPage() {
   const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
@@ -13,14 +14,14 @@ export default function CartPage() {
   return (
     <div className={styles["cart-container"]}>
       <h1 className={styles["cart-h1"]}>Carrinho</h1>
-      {cart.getItems().length === 0 ? (
+      {items.length === 0 ? (
         <div className={styles["empty-cart"]}>
           <p>Seu carrinho está vazio...</p>
         </div>
       ) : (
         <ul>
-          {items.map((item) => (
-            <div className={styles["wine-cart"]} key={item.id}>
+          {items.map((item, index) => (
+            <div className={styles["wine-cart"]} key={`${item.id}-${index}`}>
               <div
                 className={styles["wine-cart-image"]}
                 style={{
@@ -33,20 +34,32 @@ export default function CartPage() {
               <div className={styles["wine-cart-buttons"]}>
                 <div
                   className={styles["cart-btn-minus"]}
-                  onClick={() => decreaseQuantity(item.id)} 
+                  onClick={() => decreaseQuantity(item.id)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Diminuir quantidade de ${item.name}`}
+                  onKeyDown={(e) => e.key === "Enter" && decreaseQuantity(item.id)}
                 >
                   -
                 </div>
                 <div className={styles["cart-quantity"]}>{item.quantity}</div>
                 <div
                   className={styles["cart-btn-more"]}
-                  onClick={() => increaseQuantity(item.id)} 
+                  onClick={() => increaseQuantity(item.id)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Aumentar quantidade de ${item.name}`}
+                  onKeyDown={(e) => e.key === "Enter" && increaseQuantity(item.id)}
                 >
                   +
                 </div>
                 <div
                   className={styles["cart-delete-item"]}
                   onClick={() => removeFromCart(item.id)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Remover ${item.name} do carrinho`}
+                  onKeyDown={(e) => e.key === "Enter" && removeFromCart(item.id)}
                 >
                   <RiDeleteBin6Line />
                 </div>
@@ -56,15 +69,18 @@ export default function CartPage() {
         </ul>
       )}
 
-      {cart.getItems().length > 0 && (
+      {items.length > 0 && (
         <div className={styles["cart-total-div"]}>
           <h2 className={styles["cart-total-div-h2"]}>Total</h2>
           <h2 className={styles["cart-total-div-h2-price"]}>
-            {totalPrice.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
+            {(totalPrice || 0).toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            })}
           </h2>
         </div>
       )}
-      {cart.getItems().length > 0 && <CheckoutButton />}
+      {items.length > 0 && <CheckoutButton />}
     </div>
   );
 }
