@@ -7,7 +7,6 @@ import CheckoutButton from "./CheckoutButton";
 
 export default function CartPage() {
   const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
-
   const items = cart.getItems();
   const totalPrice = cart.getTotal();
 
