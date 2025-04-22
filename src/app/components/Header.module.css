@@ -54,7 +54,9 @@
 
 .hamburger.active {
     background: white;
+    background: rgb(82, 5, 18);
     transform: rotate(90deg);
+    border: 1px solid white;
 }
 
 .line {
@@ -68,13 +70,18 @@
 .hamburger.active .line:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
     background: rgb(109, 7, 24);
+    display: none;
 }
 .hamburger.active .line:nth-child(2) {
     opacity: 0;
+    color: white;
+    display: none;
 }
 .hamburger.active .line:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
     background: rgb(109, 7, 24);
+    color: white;
+    display: none;
 }
 
 

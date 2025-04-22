@@ -1,7 +1,6 @@
 .cart-container {
     width: 100%;
     min-height: 100vh;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,9 +10,14 @@
   }
 
   .cart-h1 {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(138, 7, 29);
     color: black;
-    margin-bottom: 30px;
+    
   }
 
   .wine-cart {
@@ -128,16 +132,15 @@
     justify-content: center;
 }
 
-.cart-total-div-center {
+.cart-total-div {
     width: 100%;
-    height: 120px;
+    height: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     gap: 20px;
-    margin-top: 20px;
     color: rgb(52, 221, 89);
 }
 
@@ -163,7 +166,7 @@
     transition: 0.3s ease-in-out;
     margin-bottom: 10px;
 }.cart-total-div-h2-price:hover {
-    color: rgb(51, 134, 69);
+    color: rgb(72, 236, 108);
 }
 
 

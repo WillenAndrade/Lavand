@@ -70,13 +70,13 @@ export default function CartPage() {
 
       {items.length > 0 && (
         <div className={styles["cart-total-div"]}>
-          <h2 className={styles["cart-total-div-h2"]}>Total</h2>
-          <h2 className={styles["cart-total-div-h2-price"]}>
-            {(totalPrice || 0).toLocaleString("pt-BR", {
-              style: "currency",
-              currency: "BRL",
-            })}
-          </h2>
+            <h2 className={styles["cart-total-div-h2"]}>Total</h2>
+            <h2 className={styles["cart-total-div-h2-price"]}>
+              {(totalPrice || 0).toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </h2>
         </div>
       )}
       {items.length > 0 && <CheckoutButton />}
