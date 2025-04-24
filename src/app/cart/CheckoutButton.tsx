@@ -403,7 +403,7 @@ const CheckoutButton = () => {
               >
                 <option value="">Selecione o banco</option>
                 
-                <option value="1">Visa</option>
+                <option value="1" defaultValue={1}>Confirmar depois</option>
               </select>
             </div>
             <div className={styles["form-group"]}>
