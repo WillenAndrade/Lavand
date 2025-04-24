@@ -3,7 +3,7 @@ import { useCart } from "@/app/cart/CartContext";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useEffect } from "react";
 import styles from "./CartPage.module.css";
-import CheckoutButton from "./CheckoutButton";
+import CheckoutButton from "../cart/CheckoutButton"
 
 export default function CartPage() {
   const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();

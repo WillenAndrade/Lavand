@@ -1,13 +1,22 @@
 .choose-payment-method {
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.pix-qr-code {
+  margin-top: 20px;
+  text-align: center;
+}
+.pix-qr-code img {
+  max-width: 200px;
 }
 
 .choose-payment-method.active {
-  height:  140vh;
+  height:  200vh;
   background: rgb(109, 7, 24);
 }
 
@@ -47,14 +56,22 @@
 .pix-icon-div {
     width: 160px;
     height: 100px;
-    border: 2px solid rgb(100, 100, 211);
+    display: flex;
+    align-items: center;
     border-radius: 20px;
-    background-image: url("/lavand/public/pixLogo2.webp");
-    background-size: center;
     border-radius: 25px;
+    background-image: url(../../../public/pix-logo.jpg);
+    background-position: center;
+    object-fit: contain;
     cursor: pointer;
-    margin: 0 5px;
+    transition: 0.3s ease-in-out;
+    margin: 0 10px;
 }
+
+.pix-icon-div:hover {
+  transform: translateY(-10px);
+  color: rgb(248, 225, 96);
+} 
 
 .card-icon-div {
     width: 160px;
@@ -67,16 +84,14 @@
     cursor: pointer;
     background-image: linear-gradient(to right, rgb(2, 180, 2), rgb(8, 212, 8), rgb(2, 180, 2));
     transition: 0.3s ease-in-out;
+    margin: 0 10px;
 } 
   .card-icon-div:hover{
     transform: translateY(-10px);
     border: 2px solid rgb(236, 213, 82);
   }
 
-  .card-icon-div:hover {
-    color: rgb(248, 225, 96);
-    border: 2px solid rgb(248, 225, 96);
-  } 
+ 
 
     .card-span {
         margin-left: 10px;
@@ -176,19 +191,37 @@
     margin-bottom: 15px;
   }
 
+
+  @media (min-width: 480px) {
+    .choose-payment-method {
+      width: 100%;
+      height: 30vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pix-icon-div, .card-icon-div {
+      margin: 0px 20px;
+    }
+  }
   @media(min-width: 640px) {
     .choose-payment-method.active {
       height: 170vh;
+    }
+    .pix-icon-div, .card-icon-div {
+      margin: 0px 25px;
     }
   }
     
   @media(min-width: 720px) {
     .choose-payment-method.active {
-      height: 160vh;
+      height: 220vh;
     }
     .payment-form {
       min-width: 600px;
-      height: 580px;
+      height: 680px;
       border-radius: 25px;
       display: flex;
       flex-wrap: wrap;
@@ -209,9 +242,15 @@
       color: rgb(109, 7, 24);
     }
   }
+  .pix-icon-div, .card-icon-div {
+    margin: 0px 30px;
+  }
 
   @media(min-width: 960px) {
     .choose-payment-method.active {
       height: 110vh;
+    }
+    .pix-icon-div, .card-icon-div {
+      margin: 0px 40px;
     }
   }

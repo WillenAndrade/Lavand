@@ -23,7 +23,7 @@
   .wine-cart {
     display: flex;
     flex-direction: column;
-    height: 450px;
+    height: 560px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -36,8 +36,8 @@
 }
 
 .wine-cart-image {
-    width: 140px;
-    height: 300px;
+    width: 160px;
+    height: 360px;
     Border: 1px solid rgb(138, 7, 29);
     border: 2px solid rgb(236, 213, 82);
     border-radius: 15px;

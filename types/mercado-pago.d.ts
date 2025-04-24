@@ -1,34 +1,54 @@
+export {};
+
 interface MercadoPagoOptions {
   locale?: string;
 }
 
-interface MercadoPago {
-  createCardToken(card: {
-    cardNumber: string;
-    cardholderName: string;
-    expirationMonth: string;
-    expirationYear: string;
-    securityCode: string;
-    identificationType: string;
-    identificationNumber: string;
-  }): Promise<{ id: string }>;
-  getPaymentMethods(params: { bin: string }): Promise<{ results: { id: string }[] }>;
-  getInstallments(params: {
-    amount: number;
+interface CardForm {
+  getCardFormData: () => {
     paymentMethodId: string;
-  }): Promise<any>;
-  bricks: () => {
-    create: (
-      brick: string,
-      container: string,
-      config: any 
-    ) => void;
+    issuerId: string;
+    cardholderEmail: string;
+    amount: string;
+    token: string;
+    installments: string;
+    identificationNumber: string;
+    identificationType: string;
   };
 }
 
-interface Window {
-  MercadoPago: new (
-    publicKey: string,
-    options?: MercadoPagoOptions
-  ) => MercadoPago;
+interface MercadoPagoInstance {
+  cardForm: (options: {
+    amount: string;
+    iframe?: boolean;
+    form: {
+      id: string;
+      cardNumber: { id: string; placeholder: string };
+      expirationDate: { id: string; placeholder: string };
+      securityCode: { id: string; placeholder: string };
+      cardholderName: { id: string; placeholder: string };
+      issuer: { id: string; placeholder: string };
+      installments: { id: string; placeholder: string };
+      identificationType: { id: string; placeholder: string };
+      identificationNumber: { id: string; placeholder: string };
+      cardholderEmail: { id: string; placeholder: string };
+    };
+    callbacks: {
+      onFormMounted: (error?: any) => void;
+      onSubmit: (event: Event) => void;
+      onFetching?: (resource: string) => () => void;
+    };
+  }) => CardForm;
+  bricks: () => {
+    create: (brick: string, container: string, config: any) => void;
+  };
+}
+
+declare global {
+  interface Window {
+    MercadoPago: new (
+      publicKey: string,
+      options?: MercadoPagoOptions
+    ) => MercadoPagoInstance;
+  }
 }

@@ -1,74 +1,75 @@
-"use client";
-
-import {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  ReactNode,
-} from "react";
-import { Wine } from "./models/Wine";
-import { Cart as CartModel } from "../cart/models/Cart"
-
-interface CartContextType {
-  cart: CartModel;
-  addToCart: (wine: Wine) => void;
-  removeFromCart: (id: number) => void;
-  increaseQuantity: (id: number) => void; 
-  decreaseQuantity: (id: number) => void; 
-  clearCart: () => void;
-}
+"use client"
+import React, { createContext, useState, useEffect } from "react";
+import { Cart } from "./models/Cart";
 
 export type CartItem = {
   id: number;
   name: string;
   price: number;
   quantity: number;
-  src: string; 
+  src: string;
+  description?: string;
+  category_id?: string;
+  picture_url?: string;
 };
 
-export const CartContext = createContext<CartContextType | undefined>(undefined);
+interface CartContextType {
+  cart: Cart;
+  addToCart: (item: CartItem) => void;
+  removeFromCart: (id: number) => void;
+  increaseQuantity: (id: number) => void;
+  decreaseQuantity: (id: number) => void;
+  clearCart: () => void;
+}
 
-export const CartProvider = ({ children }: { children: ReactNode }) => {
-  const [cart, setCart] = useState<CartModel>(() => {
+export const CartContext = createContext<CartContextType>({
+  cart: new Cart(),
+  addToCart: () => {},
+  removeFromCart: () => {},
+  increaseQuantity: () => {},
+  decreaseQuantity: () => {},
+  clearCart: () => {},
+});
+
+export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [cart, setCart] = useState<Cart>(() => {
     if (typeof window !== "undefined") {
       const savedCart = localStorage.getItem("cart");
-      return savedCart ? CartModel.fromJSON(savedCart) : new CartModel();
+      return savedCart ? Cart.fromJSON(savedCart) : new Cart();
     }
-    return new CartModel();
+    return new Cart();
   });
 
   useEffect(() => {
-    localStorage.setItem("cart", cart.toJSON());
+    localStorage.setItem("cart", JSON.stringify(cart.toJSON()));
   }, [cart]);
 
-  const addToCart = (wine: Wine) => {
-    const newCart = new CartModel(cart.getItems());
-    newCart.addItem(wine);
+  const addToCart = (item: CartItem) => {
+    const newCart = new Cart(cart.getItems());
+    newCart.addItem(item);
     setCart(newCart);
   };
 
   const removeFromCart = (id: number) => {
-    const newCart = new CartModel(cart.getItems());
+    const newCart = new Cart(cart.getItems());
     newCart.removeItem(id);
     setCart(newCart);
   };
 
-  const increaseQuantity = (id: number) => { // Atualizado para 'increaseQuantity'
-    const newCart = new CartModel(cart.getItems());
-    newCart.increaseQuantity(id);  // Método da classe Cart
+  const increaseQuantity = (id: number) => {
+    const newCart = new Cart(cart.getItems());
+    newCart.increaseQuantity(id);
     setCart(newCart);
   };
 
-  const decreaseQuantity = (id: number) => { // Atualizado para 'decreaseQuantity'
-    const newCart = new CartModel(cart.getItems());
-    newCart.decreaseQuantity(id);  // Método da classe Cart
+  const decreaseQuantity = (id: number) => {
+    const newCart = new Cart(cart.getItems());
+    newCart.decreaseQuantity(id);
     setCart(newCart);
   };
 
   const clearCart = () => {
-    const newCart = new CartModel();
-    setCart(newCart);
+    setCart(new Cart());
   };
 
   return (
@@ -81,7 +82,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 };
 
 export const useCart = () => {
-  const context = useContext(CartContext);
-  if (!context) throw new Error("useCart must be used within a CartProvider");
+  const context = React.useContext(CartContext);
+  if (!context) {
+    throw new Error("useCart deve ser usado dentro de um CartProvider");
+  }
   return context;
 };
