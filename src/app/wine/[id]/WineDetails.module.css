@@ -18,7 +18,7 @@
     border: 1px solid black;
     background: white;
     margin: 20px 0;
-    border: 2px solid rgb(236, 213, 82);
+    border: 1px solid rgb(236, 213, 82);
 }
 
     .wine-image {
@@ -223,6 +223,7 @@
     }
     .quantity {
         width: 90%;
+        border: 2px solid rgb(236, 213, 82);
     }
     .quantity-selector {
         gap: 10px;
@@ -283,6 +284,7 @@
     .quantity {
         width: 80%;
         height: 50px;
+        border: 2px solid rgb(236, 213, 82);
     }
     .buy-btn-details {
         height: 35px;
@@ -373,7 +375,7 @@
     .wine-box {
         width: 840px;
         height: 560px;
-        border: 2px solid orange;
+        border: 1px solid orange;
     }
     
     .wine-image {
@@ -395,6 +397,7 @@
     .quantity {
         width: 80%;
         height: 70px;
+        border: 2px solid rgb(236, 213, 82);
     }
     .quantity-selector {
         width: 50%;
@@ -440,6 +443,7 @@
     .quantity {
         width: 80%;
         height: 70px;
+        border: 2px solid rgb(236, 213, 82);
     }
      .buy-btn-details {
             width: 140px;

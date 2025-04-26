@@ -1,60 +1,47 @@
-.choose-payment-method {
-  width: 100%;
+.payment-method-container {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background: white;
+    position: relative;
+}
+.payment-method {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
   height: 40vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  gap: 10px;
 }
 
-.pix-qr-code {
-  margin-top: 20px;
-  text-align: center;
-}
-.pix-qr-code img {
-  max-width: 200px;
-}
-
-.choose-payment-method.active {
-  height:  200vh;
-  background: rgb(109, 7, 24);
-}
-
-.checkout-button-div {
+.pix-form-container {
     width: 100%;
-    height: 50px;
+    min-height: 840px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s ease-in-out;
-}
-
-.checkout-button {
-    width: 140px;
-    height: 50px;
-    padding: 0 10px;
-    font-weight: lighter;
-    border-radius: 40px;
-    margin-top: 20px;
-    font-size: 26px;
-    cursor: pointer;
-    font-weight: lighter;
     background: white;
-    transition: 0.3s ease-in-out;
-    border: 2px solid rgb(236, 213, 82);
-    color: white;
-    background: rgb(109, 7, 24);
-
+    background: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
 }
 
-.checkout-button:hover {
-    border: 2px solid rgb(247, 225, 101);
-    color: rgb(247, 225, 101);
-    background: rgb(109, 7, 24);
+.card-form-container {
+    width: 100%;
+    height: 1660px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
 }
 
 .pix-icon-div {
-    width: 160px;
+    width: 170px;
     height: 100px;
     display: flex;
     align-items: center;
@@ -63,15 +50,19 @@
     background-image: url(../../../public/pix-logo.jpg);
     background-position: center;
     object-fit: contain;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    margin: 0 10px;
 }
 
 .pix-icon-div:hover {
   transform: translateY(-10px);
   color: rgb(248, 225, 96);
 } 
+
+.card-span {
+  font-size: 20px;
+}
 
 .card-icon-div {
     width: 160px;
@@ -83,22 +74,34 @@
     border-radius: 15px;
     cursor: pointer;
     background-image: linear-gradient(to right, rgb(2, 180, 2), rgb(8, 212, 8), rgb(2, 180, 2));
+    background: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+    border: 2px solid rgb(236, 213, 82);
     transition: 0.3s ease-in-out;
-    margin: 0 10px;
 } 
   .card-icon-div:hover{
     transform: translateY(-10px);
     border: 2px solid rgb(236, 213, 82);
+    color: rgb(247, 224, 95);
   }
 
- 
+  .card-payment-form {
+    width: 95%;
+    height: auto;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+    font-size: 23px;
+    color: white;
+  }
 
-    .card-span {
-        margin-left: 10px;
-    }
-  
-  .payment-form {
-    width: 100%;
+  .pix-payment-form {
+    width: 95%;
     height: auto;
     max-width: 400px;
     background: white;
@@ -109,19 +112,39 @@
     border: 2px solid rgb(109, 7, 24);
     position: relative;
     transition: 0.3s ease-in-out;
-    
+    border: 2px solid rgb(109, 7, 24);
   }
-  .payment-form label {
-    color: rgb(240, 215, 76);
+
+  .pix-payment-form label {
+    font-size: 23px;
     color: rgb(109, 7, 24);
   }
 
-  .exit-btn {
+  .exit-btn-card {
     width: 25px;
     height: 25px;
     padding: 5px;
     position: absolute;
-    top: 15px;
+    top: 5px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+    border-radius:  40px;
+  }
+  .exit-btn-card:hover {
+    color: rgb(226, 31, 63);
+    font-weight: 400;
+  }
+  .exit-btn-pix {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    position: absolute;
+    top: 5px;
     right: 15px;
     display: flex;
     justify-content: center;
@@ -131,12 +154,24 @@
     color: rgb(109, 7, 24);
     border-radius:  40px;
   }
-  .exit-btn:hover {
+  .exit-btn-pix:hover {
     color: rgb(226, 31, 63);
     font-weight: 400;
   }
 
   .payment-details {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    font-size: 26px;
+    justify-content: center;
+    font-weight: lighter;
+    align-items: center;
+    color: rgb(109, 7, 24);
+    color: white;
+  }
+
+  .payment-details-pix {
     width: 100%;
     height: 100px;
     display: flex;
@@ -144,43 +179,41 @@
     justify-content: center;
     font-weight: lighter;
     align-items: center;
-    color: rgb(109, 7, 24);
+    color: rgb(57, 190, 176);
   }
-  
+
   .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 18px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 10px;
   }
 
   .form-group input:hover {
-      border-color: rgb(109, 7, 24);
-     
-  }
-
-  .form-group input:focus {
-    border: 2px solid rgb(109, 7, 24);
     border-color: rgb(109, 7, 24);
-    color: rgb(109, 7, 24);
-    outline: none;
+   
 }
-  
-  .form-group input,
-  .form-group select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 18px;
-    padding-left: 10px;
-  }
-  
-  .checkout-button:disabled {
+
+.form-group input:focus {
+  border: 2px solid rgb(109, 7, 24);
+  border-color: rgb(109, 7, 24);
+  color: rgb(109, 7, 24);
+  outline: none;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgb(109, 7, 24);
+  border-radius: 10px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.checkout-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
@@ -191,66 +224,55 @@
     margin-bottom: 15px;
   }
 
-
-  @media (min-width: 480px) {
-    .choose-payment-method {
-      width: 100%;
-      height: 30vh;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .pix-icon-div, .card-icon-div {
-      margin: 0px 20px;
-    }
+  .pix-qr-code {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-  @media(min-width: 640px) {
-    .choose-payment-method.active {
-      height: 170vh;
-    }
-    .pix-icon-div, .card-icon-div {
-      margin: 0px 25px;
-    }
-  }
-    
-  @media(min-width: 720px) {
-    .choose-payment-method.active {
-      height: 220vh;
-    }
-    .payment-form {
-      min-width: 600px;
-      height: 680px;
-      border-radius: 25px;
-      display: flex;
-      flex-wrap: wrap;
-      margin: 20px auto;
-    }
-    .form-group {
-      width: 45%;
-      margin: 0 10px;
-    }
-    .payment-details {
-      width: 100%;
-      height: 100px;
-      display: flex;
-      font-size: 26px;
-      justify-content: center;
-      font-weight: lighter;
-      align-items: center;
-      color: rgb(109, 7, 24);
-    }
-  }
-  .pix-icon-div, .card-icon-div {
-    margin: 0px 30px;
+  
+  .qr-code-img {
+    max-width: 70%;
   }
 
-  @media(min-width: 960px) {
-    .choose-payment-method.active {
-      height: 110vh;
+  .progress-bar {
+    display: none;
+  }
+
+  .checkout-button-div {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 22px;
+  }
+
+   .pix-checkout-btn {
+    width: 60%;
+    height: 50px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+    cursor: pointer;
+  }
+
+  .card-checkout-btn {
+    width: 60%;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+    background: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+    cursor: pointer;
+  }
+
+  @media(min-width: 480px) {
+    .payment-method {
+      gap: 20px;
     }
-    .pix-icon-div, .card-icon-div {
-      margin: 0px 40px;
-    }
+  
   }

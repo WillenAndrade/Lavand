@@ -23,6 +23,11 @@ const WineDetails = ({ params }: WineDetailsProps) => {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);~
+
+  useEffect(() => {
+    console.log("Saving cart to localStorage:", cart.getItems());
+    localStorage.setItem("cart", JSON.stringify(cart.toJSON()));
   }, [cart]);
 
   if (!wine) return <div>Wine not found</div>;

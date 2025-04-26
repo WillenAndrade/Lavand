@@ -2,11 +2,10 @@
     width: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
+    margin: 0;
   }
 
   .cart-h1 {
@@ -17,6 +16,7 @@
     align-items: center;
     color: rgb(138, 7, 29);
     color: black;
+    background: white;
     
   }
 
@@ -142,6 +142,7 @@
     text-align: center;
     gap: 20px;
     color: rgb(52, 221, 89);
+    background: white;
 }
 
 .cart-total-div-h2 {
