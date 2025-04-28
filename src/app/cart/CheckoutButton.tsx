@@ -140,8 +140,8 @@ const CheckoutButton = () => {
 
   
   const validatePixForm = () => {
-    const { email, docNumber, firstName, lastName } = formData; // Incluindo firstName e lastName na validação
-    // Todos os campos essenciais para PIX agora são validados
+    const { email, docNumber, firstName, lastName } = formData; 
+    
     if (!email || !docNumber || !firstName || !lastName) {
       return "Por favor, preencha todos os campos (Nome, Sobrenome, E-mail e Documento).";
     }
@@ -151,7 +151,7 @@ const CheckoutButton = () => {
     if (formData.docType === "CPF" && !/^\d{11}$/.test(docNumber.replace(/[^\d]/g, ""))) {
       return "CPF inválido.";
     }
-    // Adicionar validações básicas para nome/sobrenome se necessário (ex: não vazios)
+    
     return null;
   };
 
@@ -348,34 +348,34 @@ const CheckoutButton = () => {
         payment_method_id: "pix", 
         
         payer: {
-          email: formData.email, // E-mail do estado do formulário
-          first_name: formData.firstName, // Primeiro nome do estado do formulário
-          last_name: formData.lastName,   // Sobrenome do estado do formulário
-          identification: { // Objeto de identificação
-            type: formData.docType, // Tipo de documento do estado do formulário
-            number: formData.docNumber.replace(/[^\d]/g, ""), // Número do documento limpo
+          email: formData.email, 
+          first_name: formData.firstName, 
+          last_name: formData.lastName,  
+          identification: { 
+            type: formData.docType,
+            number: formData.docNumber.replace(/[^\d]/g, ""), 
           },
-          // Adicione dados de endereço ou outros campos do pagador se sua API backend/MP exigir
-          // address: { ... }
+          
+          
         },
-        // --- FIM DA ESTRUTURA PAYER ---
+        
         items: cart.getItems().map((item) => ({
           id: item.id.toString(),
           title: item.name,
           description: item.description || item.name,
-          picture_url: item.src, // Certifique-se de que é uma URL válida se necessário
+          picture_url: item.src, 
           unit_price: Number(item.price.toFixed(2)),
           quantity: item.quantity,
-          category_id: item.category_id || "wines", // Use um category_id válido
+          category_id: item.category_id || "wines", 
           currency_id: "BRL",
         })),
-        // Adicione outros campos relevantes como external_reference, notification_url, etc.
+        
       };
 
       console.log("📤 Enviando paymentData (PIX) para o backend:", paymentData);
 
-      // --- CORRIGINDO O ENDPOINT PARA PIX ---
-      const res = await fetch("/api/mercado-pago/pix", { // <-- MUDANÇA AQUI: Endpoint correto para PIX
+     
+      const res = await fetch("/api/mercado-pago/pix", { 
         method: "POST",
         body: JSON.stringify(paymentData),
         headers: { "Content-Type": "application/json" },
@@ -383,24 +383,24 @@ const CheckoutButton = () => {
 
       const data = await res.json();
 
-      // Tratamento da resposta do backend para PIX
+     
       if (res.ok && data.status === "pending" && data.qr_code_base64) {
         console.log("✅ QR Code PIX recebido.");
         setPixQRCode(data.qr_code_base64);
-        // Opcional: exibir o código copia e cola também: data.qr_code
+        
       } else {
         console.error("❌ Erro ao gerar QR Code para PIX:", data);
         setError(data.error || "Erro ao gerar QR Code para PIX.");
       }
     } catch (err: any) {
-      // Tratamento de erros de rede ou exceções
+      
       setError(err.message || "Erro na comunicação com o servidor de pagamento PIX.");
       console.error("❌ Erro ao processar PIX:", err);
     } finally {
-      setIsLoading(false); // Esconde o indicador de carregamento
+      setIsLoading(false); 
     }
   };
-  // --- Fim do método handlePixSubmit Corrigido ---
+ 
 
 
   if (!mpInstance && cardPaymentMethod) {

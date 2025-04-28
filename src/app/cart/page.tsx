@@ -18,7 +18,8 @@ export default function CartPage() {
           <p>Seu carrinho está vazio...</p>
         </div>
       ) : (
-        <ul>
+       <div className={styles["cart-display"]}>
+         <ul>
           {items.map((item, index) => (
             <div className={styles["wine-cart"]} key={`${item.id}-${index}`}>
               <div
@@ -66,6 +67,9 @@ export default function CartPage() {
             </div>
           ))}
         </ul>
+       </div>
+
+
       )}
 
       {items.length > 0 && (

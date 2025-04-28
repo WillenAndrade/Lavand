@@ -9,6 +9,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Lavand",
   description: "Store to buy your Wines",
+  icons: {
+    icon: '/logopequena.png',
+  },
 };
 
 export default function RootLayout({
