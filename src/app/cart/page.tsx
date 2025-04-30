@@ -68,8 +68,6 @@ export default function CartPage() {
           ))}
         </ul>
        </div>
-
-
       )}
 
       {items.length > 0 && (

@@ -119,9 +119,25 @@
     padding: 0 10px;
 }
 
+.award-div {
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.award-icon {
+    width: 50px;
+    height: 50px;
+    color: rgb(252, 225, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .description-award {
     font-size: 18px;
-    margin-bottom: 15px;
     color: black;
 }
 .description-price {

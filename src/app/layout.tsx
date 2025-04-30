@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Lavand",
   description: "Store to buy your Wines",
   icons: {
-    icon: '/logopequena.png',
+    icon: '/logoredonda2.png',
   },
 };
 

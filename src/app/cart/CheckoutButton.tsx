@@ -422,7 +422,7 @@ const CheckoutButton = () => {
             <div className={styles["exit-btn-card"]} onClick={() => setCardPaymentMethod(false)}>
               x
             </div>
-            <h3 className={styles["payment-details"]}>Cartão</h3>
+            <h3 className={styles["payment-details"]}>CARTÃO</h3>
 
             <div className={styles["form-group"]}>
               <label htmlFor="form-checkout__cardNumber">Número do Cartão</label>

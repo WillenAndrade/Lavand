@@ -6,6 +6,7 @@ import BuyButton from "@/app/components/BuyButton";
 import { useCart } from "@/app/cart/CartContext";
 import Link from "next/link";
 import { Wine } from "../../cart/models/Wine"
+import { FaAward } from "react-icons/fa";
 
 type WineDetailsProps = {
   params: Promise<{ id: string }>;
@@ -40,7 +41,7 @@ const WineDetails = ({ params }: WineDetailsProps) => {
       wine.name,
       wine.src,
       wine.price,
-      quantity // Usa o estado quantity
+      quantity 
     );
     addToCart(wineInstance);
   };
@@ -75,7 +76,7 @@ const WineDetails = ({ params }: WineDetailsProps) => {
             <h1 className={styles["description-name-checkout"]}>{wine.name}</h1>
           </div>
           <h2 className={styles["description-grape"]}>{wine.description.grape}</h2>
-          <p className={styles["description-award"]}>{wine.description.award}</p>
+          <div className={styles["award-div"]}>{wine.description.award !== "" && <div className={styles["award-icon"]}><FaAward size={26}/></div>}<p className={styles["description-award"]}>{wine.description.award}</p></div>
           <h2 className={styles["description-price"]}>
             {wine.price.toLocaleString("pt-BR", {
               style: "currency",

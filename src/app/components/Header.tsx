@@ -32,7 +32,7 @@ export function Header() {
                 <ul className={styles["nav-ul"]}>
                     <li className={styles["nav-li"]}>
                         <Link className={styles["Link-to"]} href="/">Adega</Link>
-                        <Link className={styles["Link-to"]} href="/">Bônus</Link>
+                        <Link className={styles["Link-to"]} href="/bonus">Bônus</Link>
                         <Link className={styles["Link-to"]} href="/">FeedBack</Link>
                     </li>
                 </ul>

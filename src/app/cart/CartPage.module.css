@@ -5,8 +5,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    margin: 0;
-    background: linear-gradient(to right, rgb(109, 7, 24), rgb(170, 13, 39), rgb(109, 7, 24));
+    margin: 0 0 -20px 0;
   }
 
   .cart-display {
@@ -231,5 +230,12 @@
     @media(min-width: 600px) {
         .empty-cart {
             height: 100dvh;
+        }
+    }
+
+    @media(min-width: 840px) {
+        .wine-cart {
+            max-width: 840px;
+            margin: 0 auto;
         }
     }
