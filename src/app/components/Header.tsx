@@ -33,7 +33,6 @@ export function Header() {
                     <li className={styles["nav-li"]}>
                         <Link className={styles["Link-to"]} href="/">Adega</Link>
                         <Link className={styles["Link-to"]} href="/bonus">Bônus</Link>
-                        <Link className={styles["Link-to"]} href="/">FeedBack</Link>
                     </li>
                 </ul>
             </nav>

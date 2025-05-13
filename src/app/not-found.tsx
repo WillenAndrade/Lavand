@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import styles from "../pages/pages.module.css"
+import styles from "./pages/pages.module.css"
 export default function Custom404() {
 
   return (

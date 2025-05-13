@@ -27,7 +27,7 @@ const CardForm: React.FC<CardFormProps> = ({
         <div className={styles["exit-btn"]} onClick={() => setCardPaymentMethod(false)}>x</div>
         <h3 className={styles["payment-details"]}>Detalhes do Pagamento (Cartão)</h3>
 
-        {/* Campos do formulário */}
+        
         <div className={styles["form-group"]}>
           <label htmlFor="form-checkout__cardNumber">Número do Cartão</label>
           <input

@@ -11,14 +11,13 @@ const HamburgerMenu: FC = () => {
 
   return (
     <div>
-      {/* Hamburger icon */}
+      
       <div className={styles.hamburger} onClick={toggleMenu}>
         <div className={styles.line}></div>
         <div className={styles.line}></div>
         <div className={styles.line}></div>
       </div>
 
-      {/* Menu */}
       {isOpen && (
         <nav className={styles.menu}>
           <ul>

@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 
 .bonus-header {
@@ -35,7 +36,7 @@
  .logo-div-bonus {
     width: 90px;
     height: 90px;
-    background-image: url("../../public/logopequena.png");
+    background-image: url("../../../public/logopequena.png");
     background-position: center;
     background-size: cover;
     border-radius: 60px;
@@ -113,7 +114,7 @@
 
 .call-to-action {
     width: 100%;
-    height: 40px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,6 +125,7 @@
     transition:  0.3s ease-in-out;
     color:rgb(28, 65, 28);
     background-image: linear-gradient(to right, rgb(100, 233, 100), rgb(108, 243, 108));
+    margin-top: 20px;
 }
 .call-to-action:hover {
     cursor: pointer;

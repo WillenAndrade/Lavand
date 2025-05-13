@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useCart } from "../cart/CartContext" // Acesso ao contexto do carrinho
+import { useCart } from "../cart/CartContext"
 
 export const MercadoPagoBrick = () => {
-  const { cart } = useCart(); // Obtendo o carrinho do contexto
+  const { cart } = useCart(); 
   const [amount, setAmount] = useState<number>(0);
 
-  // Atualizando o valor total do carrinho
+  
   useEffect(() => {
-    const totalAmount = cart.getTotal(); // Obtenha o total calculado pelo método getTotal()
+    const totalAmount = cart.getTotal(); 
     setAmount(totalAmount);
   }, [cart]);
 

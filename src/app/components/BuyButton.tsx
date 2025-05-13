@@ -16,11 +16,3 @@ const BuyButton = ({btnValue, productId, onClick}: BuybtnValue) => {
 }
 
 export default BuyButton
-
-/*
-
-<Link href={`/product/${productId}`} passHref>
-      <div className={styles["buy-btn"]}>{btnValue}</div>
- </Link>
-
-*/

@@ -7,13 +7,11 @@ import style from "./bonus.module.css"
 const Bonus = () => {
     return (
         <div className={style["general-bonus"]}>
-            <div className={style["bonus-header"]}><div className={style["logo-div-bonus"]}></div><Link href={"/"} className={style["exit-bonus"]}>x</Link></div>
-            
             <div className={style["bonus-container"]}>
                 <div className={style["bonus-initial-div"]}>
                     <div className={style["bonus-img"]}></div>
                     <div className={style["bonus-message"]}>
-                        <h1 className={style["bonus-message-title"]}>O Sabor da excelência !</h1>
+                        <h1 className={style["bonus-message-title"]}>O Sabor da excelência!</h1>
                         <h2 className={style["bonus-message-text"]}>Cada garrafa que oferecemos nasce das melhores uvas, cuidadosamente selecionadas para criar vinhos intensos e equilibrados, com sabor marcante em cada gole.
                         </h2>
                     </div>
